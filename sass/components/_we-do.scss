@@ -1,6 +1,12 @@
 /* What we are doing */
 
 .we-do {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: inherit;
+    }
+
     padding-top: 0;
 
     &__list {
@@ -18,7 +24,7 @@
         }
     
     &__item {
-            width: calc(($excluding-padding - 60px) / 3);
+            width: calc(($adaptive-desktop - 2 * 30px - 30px) / 3);
             margin-right: 30px;
             position: relative;
             display: flex;

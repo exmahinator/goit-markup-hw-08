@@ -4,7 +4,7 @@ what is out of document stream and moves along with scrolling down the page */
 .main {
     padding-top: 60px;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
         padding-top: 80px;
     }
 }

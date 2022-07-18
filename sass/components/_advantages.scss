@@ -7,43 +7,52 @@
         flex-direction: column;
         justify-content: center;
 
-        @media screen and (min-width: 480px), (min-width: 768px), (min-width: 1200px) {
+        @media screen and (min-width: $responsive-mobile) {
             flex-wrap: wrap;
+            flex-direction: row;
         }
     }
     
     &__item {
-        @media screen and (min-width: 480px) {
-            margin-bottom: 30px;
-            &:nth-last-child() {
-                margin-bottom: 0;
-            }            
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0px;
         }
 
-        @media screen and (min-width: 768px) {
-            width: calc(($adaptive-tablet - 1 * 30px) / 2);
+        @media screen and (min-width: $adaptive-tablet) and (max-width: calc($adaptive-desktop - 1px)) {
+            // (768px(screen width) - [margins between elements] * 30px(margin size) - 30px(paddings of container)) / 2(amount of elements in row)
+            width: calc(($adaptive-tablet - 1 * 30px - 30px) / 2);
             margin-right: 30px;
             
             &:nth-child(2n) {
                 margin-right: 0px;
             }
+
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
         }
 
-        @media screen and (min-width: 1200px) {
-            width: calc(($excluding-padding - 3 * 30px) / 4);
+        @media screen and (min-width: $adaptive-desktop) {
+            width: calc(($adaptive-desktop - 3 * 30px - 30px) / 4);
             margin-right: 30px;
 
             &:nth-child(4n) {
                 margin-right: 0;
-            }                
+            } 
+            
+            &:nth-last-child(-n + 4) {
+                margin-bottom: 0;
+            }
         }
     }
 
     
     &__icon-container {
             display: flex;
-            width: 270px;
-            height: 120px;
+            width: 100%;
+            padding-top: 25px;
+            padding-bottom: 25px;
             border-radius: 4px;
     
             background-color: $team-background;
@@ -57,18 +66,23 @@
     }
     
     &__subtitle {
-            margin-top: 30px;
-            margin-bottom: 10px;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-align: center;
     
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.14;
-            text-transform: uppercase;
-            color: $secondary-text;
-        }
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $secondary-text;
+
+        
+    }
     
     &__text {
-            margin: 0;
-            margin-top: 10px;
-        }
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
 }

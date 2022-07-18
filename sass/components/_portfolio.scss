@@ -8,7 +8,7 @@
         }
     
         &__item {
-            width: calc(($excluding-padding - 60px) / 3);
+            width: calc(($adaptive-desktop - 2 * 30px - 30px) / 3);
             padding-top: 0;
             margin-right: 30px;
             margin-bottom: 30px;
