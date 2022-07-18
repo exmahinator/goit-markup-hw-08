@@ -110,10 +110,19 @@ $footer-text: #ffffff;
 $footer-transparent: rgba(255, 255, 255, 0.6);
 
 /* Common width of all containers on the page including paddings so literally 1170 + 30 */
-$container-width: 1200px;
+// $container-width: 1200px;
 
 /* Width inside container excluding padding */
 $excluding-padding: 1170px;
+
+/* Responsive below 480px */
+$responsive-mobile: 480px;
+
+/* Adaptive 768px */
+$adaptive-tablet: 768px;
+
+/* Adaptive 1200px */
+$adaptive-desktop: 1200px;
 
 /* Modal placeholder color */
 $modal-placeholder: #75757580;

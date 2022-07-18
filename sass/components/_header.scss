@@ -11,27 +11,12 @@
 
     &__container {
             display: flex;
+            
+            @media screen and (min-width: 480px) {
+                position: relative;
+                justify-content: space-between;
+            }
         }
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-
-    &__list {
-    display: flex;
-    margin-left: 93px;
-
-    position: relative;
-    }
-
-    &__item {
-    position: relative;
-
-        &:not(:first-child) {
-            margin-left: 50px;
-        }
-    }
 
     &__contacts {
     display: flex;
@@ -40,31 +25,7 @@
         &-item:not(:first-child) {
             margin-left: 30px;
         }
-    }
-
-
-    &__link {
-    display: inline-flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    align-items: center;
-
-    color: $secondary-text;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-            color: var(--accent, #2196f3);
-        }
-
-        &.current-active {
-        color: var(--accent, #2196f3);
-        }
-    }
+    }   
 
     &__contacts-link {
     display: inline-flex;
@@ -97,5 +58,63 @@
             fill: $accent;
         }
 
+    }
+
+    &__button {
+        display: flex;
+        align-self: center;
+        width: 40px;
+        height: 40px;
+
+        margin: 10px 15px 10px auto;
+
+        background-color: blue;
+
+        @media screen and (min-width: 480px) {
+            display: none;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__list {
+    display: flex;
+    margin-left: 93px;
+
+    position: relative;
+    }
+
+    &__item {
+    position: relative;
+
+        &:not(:first-child) {
+            margin-left: 50px;
+        }
+    }
+
+    &__link {
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+
+    color: $secondary-text;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent, #2196f3);
+        }
+
+        &.current-active {
+        color: var(--accent, #2196f3);
+        }
     }
 }
