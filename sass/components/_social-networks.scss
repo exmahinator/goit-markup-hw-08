@@ -1,0 +1,56 @@
+/* Team and Footer social links icons */
+
+.social-networks {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+            margin-right: 10px;
+        }
+    
+    &__link {
+            width: 44px;
+            height: 44px;
+    
+            background-color: $team-social;
+            color: $team-icons;
+    
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &--dark {
+                background-color: $footer-social;
+                
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+
+            &:hover,
+            &:focus {
+                background-color: $accent;
+                transform: scale(1.25);
+                }
+        }
+    
+        &__icon {
+            width: 20px;
+            height: 20px;
+            fill: $team-icons;
+    
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &--white {
+                fill: $footer-text;
+                }
+
+            .social-networks__link:hover &,
+            .social-networks__link:focus & {
+                fill: $team-icons-hover;
+            }
+        }
+}

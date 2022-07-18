@@ -1,0 +1,38 @@
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Reset link */
+
+.link-reset {
+    text-decoration: none;
+    font-style: normal;
+}
+
+/* Reset title */
+
+.title-reset {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+}
+
+/* Button reset */
+.button {
+    font: inherit;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Form reset */
+
+.input,
+.textarea,
+.select {
+    font: inherit;
+    margin: 0;
+    border: none;
+}

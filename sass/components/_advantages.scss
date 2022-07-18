@@ -1,0 +1,44 @@
+/* Our advantages */
+
+.advantages {
+
+    &__list {
+            display: flex;
+        }
+    
+    &__item {
+            width: calc(($excluding-padding - 90px) / 4);
+            margin-right: 30px;
+
+            &:nth-child(4n) {
+                    margin-right: 0;
+                }
+        }
+    
+    &__icon-container {
+            display: flex;
+            width: 270px;
+            height: 120px;
+            border-radius: 4px;
+    
+            background-color: $team-background;
+            justify-content: center;
+            align-items: center;
+        }
+    
+    &__subtitle {
+            margin-top: 30px;
+            margin-bottom: 10px;
+    
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            text-transform: uppercase;
+            color: $secondary-text;
+        }
+    
+    &__text {
+            margin: 0;
+            margin-top: 10px;
+        }
+}

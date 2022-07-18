@@ -1,0 +1,59 @@
+/* Regular customers */
+
+.regular-customers {
+        &__title {
+            margin-bottom: 50px;
+    
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.16;
+            text-align: center;
+            color: $secondary-text;
+        }
+    
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &__item {
+            width: calc(($excluding-padding - 150px) / 6);
+            min-height: 92px;
+            
+            &:not(:last-child) {
+                margin-right: 30px;
+                }
+        }
+    
+        &__link {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+    
+            border: 1px solid $customers-list;
+            border-radius: 4px;
+    
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                    &:hover,
+                    &:focus {
+                        color: $accent;
+                        border-color: $accent;
+                        transform: scale(1.25);
+                    }
+        }
+    
+        &__icon {
+            fill: $customers-list;
+    
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                .regular-customers__link:hover &,
+                .regular-customers__link:focus & {
+                    fill: $accent;
+                }
+        }
+}

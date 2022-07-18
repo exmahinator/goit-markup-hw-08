@@ -1,0 +1,1 @@
+Left footer's icons of social links because they have white filling and absolutely the same as in Team but there will be in need to fill them with another color.

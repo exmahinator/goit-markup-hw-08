@@ -1,0 +1,126 @@
+/* Accent color, hero button color, left part of logo color: #2196F3 */
+/* Main text color: #757575 */
+/* Secondary text color: #212121 */
+/* Right part of logo color in header: #000000 */
+/* Right part of logo color in footer: #ffffff */
+/* Background color of Temp Hero and Footer: #2F303A */
+/* Bckground color 1st layer of Hero: #c4c4c4 */
+/* Background color 3rd layer of Hero, gradient: #2F303A */
+/* Modal window background color: #00000033 */
+/* Background color of overall body: #ffffff */
+/* We do description background color: #2f303acc */
+/* Team section background color, portfolio button color: #F5F4FA */
+/* Team social list background color: #ffffff */
+/* Our customers link basic color: #AFB1B8 */
+/* Footer address text color: rgba(255, 255, 255, 0.6) */
+/* Footer social links list background color: background: rgba(255, 255, 255, 0.1); */
+/* Portfolio item border color: #eeeeee */
+
+/* Accent color, hero button color, left part of logo color, active state portfolio button */
+$accent: #2196f3;
+
+/* Main text color */
+$main-text: #757575;
+
+/* Secondary text color */
+$secondary-text: #212121;
+
+/* Main body color */
+$body-background: #ffffff;
+
+/* Header transparent color */
+$header-transparent: #ffffff4d;
+
+/* Right part of logo color in header */
+$header-logo: #000000;
+
+/* Header grid color */
+$header-grid: #ececec;
+
+/* Footer background color */
+$footer-background: #2f303a;
+
+/* 1st layer Hero background color */
+$hero-background: #c4c4c4;
+
+/* 3rd layer Hero background color, gradient */
+$hero-gradient: #2f303a66;
+
+/* Hero header and button text color */
+$hero-text: #ffffff;
+
+/* Hero button hover and focus background color */
+$hero-state-background: #f5f4fa;
+
+/* Hero button hover and focus text color */
+$hero-state-text: #212121;
+
+/* Modal window background color */
+$modal-background: #00000033;
+
+/* We do description background color */
+$we-do-background: #2f303acc;
+
+/* Team section background color */
+$team-background: #f5f4fa;
+
+/* Team item background color */
+$team-item: #ffffff;
+
+/* Team social list background color */
+$team-social: #ffffff;
+
+/* Team social list icons basic color */
+$team-icons: #afb1b8;
+
+/* Team icons hover color */
+$team-icons-hover: #ffffff;
+
+/* Our customers list icons basic color */
+$customers-list: #afb1b8;
+
+/* Footer social links background color */
+$footer-social: #ffffff1a;
+
+/* Portfolio button background color */
+$portfolio-button: #f5f4fa;
+
+/* Portfolio button hover and focus text color */
+$portfolio-state: #ffffff;
+
+/* Portfolio item background color */
+$portfolio-item: #ffffff;
+
+/* Portfolio item border color */
+$portfolio-item-border: #eeeeee;
+
+/* Portfolio overlay background */
+$portfolio-overlay: #2196f3e6;
+
+/* Footer background */
+$footer-background: #2f303a;
+
+/* Right part of logo color in footer */
+$footer-logo: #ffffff;
+
+/* Footer text color */
+$footer-text: #ffffff;
+
+/* Footer text transparent color */
+$footer-transparent: rgba(255, 255, 255, 0.6);
+
+/* Common width of all containers on the page including paddings so literally 1170 + 30 */
+$container-width: 1200px;
+
+/* Width inside container excluding padding */
+$excluding-padding: 1170px;
+
+/* Modal placeholder color */
+$modal-placeholder: #75757580;
+
+/* Field subscribe text color */
+$field-subscribe: #ffffff99;
+
+/* Fonts of the document */
+$body-fonts: 'Roboto';
+$logo-fonts: 'Raleway';

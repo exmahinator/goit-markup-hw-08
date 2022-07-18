@@ -1,0 +1,6 @@
+/* Main */
+/* Paddings 80 gives us enough space for "fixed" header,
+what is out of document stream and moves along with scrolling down the page */
+.main {
+    padding-top: 80px;
+}

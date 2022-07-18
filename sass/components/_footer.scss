@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $footer-background;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        }
+    
+    
+    
+    &__subtitle {
+        margin-bottom: 20px;
+    
+        color: $footer-text;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        }
+}
+

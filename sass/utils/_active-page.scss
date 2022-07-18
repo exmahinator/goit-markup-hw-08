@@ -1,0 +1,12 @@
+.current-active::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+
+    border-bottom: 4px solid $accent;
+    border-radius: 2px;
+
+    transform: translate(0, 25%);
+}
