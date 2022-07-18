@@ -5,36 +5,65 @@
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-
-    text-align: center;
+    display: flex;
+    justify-content: center;
 
     background-image: linear-gradient(to right,
             $hero-gradient,
             $hero-gradient),
-        url(../images/hero-background-img-sq.jpg);
-    background-repeat: no-repeat;
+        url(../images/hero-background-img-mobile-sq.jpg);
     background-position: center;
-    background-size: cover;;
+    background-size: cover;
+
+    @media screen and (min-width: 481px) {
+        background-image: linear-gradient(to right,
+                    $hero-gradient,
+                    $hero-gradient),
+                url(../images/hero-background-img-sq.jpg);
+    }
+
+    @media screen and (min-width: 769px) {
+        background-image: linear-gradient(to right,
+                    $hero-gradient,
+                    $hero-gradient),
+                url(../images/hero-background-img-sq.jpg);
+    }
 
     &__container {
     display: flex;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+        @media screen and (min-width: 769px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        }
+
     }
 
     &__title {
-    width: 50%;
+    display: flex;
     margin: 0 auto 30px;
+    max-width: 360px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
     color: $hero-text;
+
+    @media screen and (min-width: 769px) {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 50%;
+    }
+
     }
 
     &__button {
