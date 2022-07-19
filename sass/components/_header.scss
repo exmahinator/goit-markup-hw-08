@@ -1,101 +1,156 @@
 .header {
-    width: 100%;
-    background-color: $header-transparent;
-    border-bottom: 1px solid $header-grid;
+  width: 100%;
+  background-color: $header-transparent;
+  border-bottom: 1px solid $header-grid;
 
-    top: 0;
-    position: fixed;
-    z-index: 1;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
 
-    &__container {
-            display: flex;
-            
-            @media screen and (min-width: 480px) {
-                position: relative;
-                justify-content: space-between;
-            }
-        }
-
-    &__contacts {
+  &__container {
     display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $adaptive-tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  &__contacts {
+    display: none;
     margin-left: auto;
 
-        &-item:not(:first-child) {
-            margin-left: 30px;
-        }
-    }   
+    @media screen and (min-width: $adaptive-tablet) {
+      display: flex;
+    }
 
-    &__contacts-link {
+    @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
+      flex-direction: column;
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $adaptive-desktop) {
+      flex-direction: row;
+      margin-bottom: 0;
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
+      &-item:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__contacts-link {
     display: inline-flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     align-items: center;
 
     color: $main-text;
     font-weight: 500;
-    line-height: 1.14;
     letter-spacing: 0.02em;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover,
-        &:focus {
-            color: $accent;
-        }
+    &:hover,
+    &:focus {
+      color: $accent;
     }
 
-    &__icon {
-    margin-right: 10px;
-    width: 16px;
-    height: 12px;
+    @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 12px;
+      line-height: 1.16;
+    }
 
+    @media screen and (min-width: $adaptive-desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+
+  &__icon {
     fill: $main-text;
 
-        .nav__contacts-link:hover &,
-        .nav__contacts-link:focus & {
-            fill: $accent;
-        }
-
+    @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
+      margin-right: 8px;
+      &--envelope {
+        width: 14px;
+        height: 10px;
+      }
+      &--smartphone {
+        width: 10px;
+        height: 14px;
+      }
     }
 
-    &__button {
-        display: flex;
-        align-self: center;
-        width: 40px;
-        height: 40px;
-
-        margin: 10px 15px 10px auto;
-
-        background-color: blue;
-
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
+    @media screen and (min-width: $adaptive-desktop) {
+      margin-right: 10px;
+      width: 16px;
+      height: 12px;
     }
+
+    .nav__contacts-link:hover &,
+    .nav__contacts-link:focus & {
+      fill: $accent;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+
+    margin: 10px 15px 10px auto;
+
+    background-color: blue;
+
+    @media screen and (min-width: $adaptive-tablet) {
+      display: none;
+    }
+  }
 }
 
 .nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &__list {
-    display: flex;
-    margin-left: 93px;
+  &__list {
+    display: none;
+    margin-left: 88px;
 
     position: relative;
+
+    @media screen and (min-width: $adaptive-tablet) {
+      display: flex;
     }
 
-    &__item {
+    @media screen and (min-width: $adaptive-desktop) {
+      margin-left: 93px;
+    }
+  }
+
+  &__item {
     position: relative;
 
-        &:not(:first-child) {
-            margin-left: 50px;
-        }
+    &:not(:first-child) {
+      margin-left: 50px;
     }
+  }
 
-    &__link {
+  &__link {
     display: inline-flex;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -108,13 +163,13 @@
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover,
-        &:focus {
-            color: var(--accent, #2196f3);
-        }
-
-        &.current-active {
-        color: var(--accent, #2196f3);
-        }
+    &:hover,
+    &:focus {
+      color: var(--accent, #2196f3);
     }
+
+    &.current-active {
+      color: var(--accent, #2196f3);
+    }
+  }
 }

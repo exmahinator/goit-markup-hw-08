@@ -19,11 +19,11 @@
             margin-bottom: 0px;
         }
 
-        @media screen and (min-width: $adaptive-tablet) and (max-width: calc($adaptive-desktop - 1px)) {
+        @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
             // (768px(screen width) - [margins between elements] * 30px(margin size) - 30px(paddings of container)) / 2(amount of elements in row)
             width: calc(($adaptive-tablet - 1 * 30px - 30px) / 2);
             margin-right: 30px;
-            
+
             &:nth-child(2n) {
                 margin-right: 0px;
             }
@@ -36,6 +36,10 @@
         @media screen and (min-width: $adaptive-desktop) {
             width: calc(($adaptive-desktop - 3 * 30px - 30px) / 4);
             margin-right: 30px;
+
+            &:nth-child(2n) {
+                margin-right: 30px;
+            }
 
             &:nth-child(4n) {
                 margin-right: 0;
