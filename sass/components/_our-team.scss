@@ -73,7 +73,17 @@
 
   &__photo {
     display: block;
+    max-width: 450px;
+
     width: 100%;
+
+    @media screen and (min-width: $adaptive-tablet) {
+      max-width: 354px;
+    }
+
+    @media screen and (min-width: $adaptive-desktop) {
+      max-width: 270px;
+    }
   }
 
   &__info {

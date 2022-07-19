@@ -784,7 +784,18 @@ what is out of document stream and moves along with scrolling down the page */
 }
 .team__photo {
   display: block;
+  max-width: 450px;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team__photo {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__photo {
+    max-width: 270px;
+  }
 }
 .team__info {
   width: 100%;
