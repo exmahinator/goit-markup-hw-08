@@ -1436,6 +1436,9 @@ what is out of document stream and moves along with scrolling down the page */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .portfolio__summary {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .portfolio__company {
