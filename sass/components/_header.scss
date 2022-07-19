@@ -110,16 +110,43 @@
   &__button {
     display: flex;
     align-self: center;
-    width: 40px;
-    height: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    background-color: transparent;
 
     margin: 10px 15px 10px auto;
-
-    background-color: blue;
 
     @media screen and (min-width: $adaptive-tablet) {
       display: none;
     }
+  }
+
+  &__icon-mobile {
+    width: 40px;
+    height: 40px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .header__button:hover &,
+    .header__button:focus & {
+      fill: $accent;
+    }
+  }
+
+  &__button &__icon-open {
+    display: block;
+  }
+
+  &__button.is-open &__icon-open {
+    display: none;
+  }
+
+  &__button &__icon-close {
+    display: none;
+  }
+
+  &__button.is-open &__icon-close {
+    display: block;
   }
 }
 

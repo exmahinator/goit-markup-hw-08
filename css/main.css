@@ -78,6 +78,7 @@
   border: none;
   margin: 0;
   cursor: pointer;
+  padding: 0;
 }
 
 /* Form reset */
@@ -281,15 +282,36 @@
 .header__button {
   display: flex;
   align-self: center;
-  width: 40px;
-  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  background-color: transparent;
   margin: 10px 15px 10px auto;
-  background-color: blue;
 }
 @media screen and (min-width: 768px) {
   .header__button {
     display: none;
   }
+}
+.header__icon-mobile {
+  width: 40px;
+  height: 40px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__button:hover .header__icon-mobile, .header__button:focus .header__icon-mobile {
+  fill: #2196f3;
+}
+.header__button .header__icon-open {
+  display: block;
+}
+.header__button.is-open .header__icon-open {
+  display: none;
+}
+.header__button .header__icon-close {
+  display: none;
+}
+.header__button.is-open .header__icon-close {
+  display: block;
 }
 
 .nav {
@@ -333,6 +355,81 @@
 }
 .nav__link.current-active {
   color: var(--accent, #2196f3);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 40px 48px 40px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.mobile-menu__item {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.mobile-menu__item:last-child {
+  margin-bottom: 0;
+}
+.mobile-menu__link {
+  display: flex;
+  width: 100%;
+  color: #212121;
+}
+.mobile-menu__active {
+  color: #2196f3;
+}
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 64px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.mobile-menu__contacts-item {
+  display: block;
+  width: 100%;
+}
+.mobile-menu__contacts-item + .mobile-menu__contacts-item {
+  margin-top: 32px;
+}
+.mobile-menu__contacts-link {
+  display: block;
+  color: inherit;
+  width: 100%;
+}
+.mobile-menu__contacts-link--phone {
+  font-size: 34px;
+  line-height: 1.17;
+  color: #2196f3;
+}
+.mobile-menu__contacts-link--email {
+  font-size: 24px;
+  line-height: 1.16;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* Main */
@@ -494,6 +591,11 @@ what is out of document stream and moves along with scrolling down the page */
   text-transform: uppercase;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .advantages__subtitle {
+    text-align: left;
+  }
+}
 .advantages__text {
   width: 100%;
   margin: 0;
@@ -576,6 +678,39 @@ what is out of document stream and moves along with scrolling down the page */
   background-color: #2196f3;
   transform: scale(1.25);
 }
+.social-networks--mobile {
+  display: flex;
+  max-width: 357px;
+  width: 100%;
+}
+.social-networks__item--mobile {
+  position: relative;
+  margin-right: 20px;
+}
+.social-networks__item--mobile:last-child {
+  margin-right: 0;
+}
+.social-networks__item--mobile::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -10px;
+  top: 0;
+  height: 22px;
+  width: 1px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+.social-networks__item--mobile:last-child::after {
+  display: none;
+}
+.social-networks__link--mobile {
+  background-color: transparent;
+  color: #2196f3;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
 .social-networks__icon {
   width: 20px;
   height: 20px;
@@ -649,11 +784,14 @@ what is out of document stream and moves along with scrolling down the page */
 }
 .team__photo {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 .team__info {
   width: 100%;
   padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .team__name, .team__spec {
   margin-top: 0;
@@ -945,8 +1083,8 @@ what is out of document stream and moves along with scrolling down the page */
 
 .modal {
   position: absolute;
-  max-height: 581px;
-  max-width: 528px;
+  max-width: 450px;
+  width: 100%;
   top: 50%;
   left: 50%;
   background-color: #ffffff;
@@ -955,6 +1093,11 @@ what is out of document stream and moves along with scrolling down the page */
   transform: translate(-50%, -50%) scale(1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
@@ -985,7 +1128,7 @@ what is out of document stream and moves along with scrolling down the page */
 }
 .modal__form {
   display: flex;
-  width: 528px;
+  max-width: 528px;
   padding: 40px;
   flex-direction: column;
 }
@@ -1125,11 +1268,36 @@ what is out of document stream and moves along with scrolling down the page */
 
 .filter {
   display: flex;
-  justify-content: center;
-  padding-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  max-width: 362px;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+.filter__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
+.filter__item:last-child {
+  margin-right: 0;
+}
+.filter__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .filter__item {
+    margin-bottom: 0;
+  }
 }
 .filter__button {
   display: flex;
@@ -1157,24 +1325,63 @@ what is out of document stream and moves along with scrolling down the page */
 /* Portfolio */
 .portfolio__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .portfolio__item {
-  width: 370px;
+  max-width: 450px;
+  width: 100%;
   padding-top: 0;
-  margin-right: 30px;
+  margin-right: 0;
   margin-bottom: 30px;
   background-color: #ffffff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio__item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .portfolio__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 354px;
+    width: 354px;
+    padding-top: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .portfolio__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .portfolio__item:nth-last-child(-n+1) {
+    margin-bottom: 0;
+  }
 }
-.portfolio__item:nth-last-child(-n+3) {
-  margin-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    max-width: 370px;
+    width: 370px;
+    padding-top: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .portfolio__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .portfolio__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolio__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
 }
 .portfolio__item:hover, .portfolio__item:focus {
+  cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1215686275), 0px 4px 4px rgba(0, 0, 0, 0.0588235294), 1px 4px 6px rgba(0, 0, 0, 0.1607843137);
   transform: scale(1.07);
 }
@@ -1187,24 +1394,25 @@ what is out of document stream and moves along with scrolling down the page */
 }
 .portfolio__image {
   display: block;
+  width: 100%;
 }
 .portfolio__popup {
   height: 100%;
   margin-top: 0;
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.55;
   color: #ffffff;
-  transform: translatey(100%);
+  transform: translatey(0);
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9019607843);
 }
 .portfolio__item:hover .portfolio__popup, .portfolio__item:focus .portfolio__popup {
-  transform: translatey(0);
+  transform: translatey(-100%);
   opacity: 1;
 }
 .portfolio__summary {
@@ -1213,6 +1421,11 @@ what is out of document stream and moves along with scrolling down the page */
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .portfolio__summary {
+    flex-grow: 1;
+  }
 }
 .portfolio__company {
   margin: 0;

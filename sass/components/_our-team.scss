@@ -1,105 +1,105 @@
 /* Our team */
 .team {
-    background-color: $team-background;
+  background-color: $team-background;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
     text-align: center;
+    color: $secondary-text;
+  }
 
-    &__title {
-        margin-bottom: 50px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
-        text-align: center;
-        color: $secondary-text;
+  &__item {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 0;
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $team-item;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
+      margin-right: 30px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
     }
 
-    &__item {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
+    @media screen and (min-width: $adaptive-desktop) {
+      margin-right: 30px;
 
-        padding-top: 0;
-        border-radius: 0px 0px 4px 4px;
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
 
-        background-color: $team-item;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
-
-        @media screen and (min-width: $adaptive-tablet) and (max-width: $adaptive-desktop) {
-            margin-right: 30px;
-
-            &:nth-child(2n) {
-                margin-right: 0;
-            }
-
-            &:nth-last-child(-n + 2) {
-                margin-bottom: 0;
-            }
-        }
-
-        @media screen and (min-width: $adaptive-desktop) {
-            margin-right: 30px;
-
-            &:nth-child(2n) {
-                margin-right: 30px;
-            }
-
-            &:nth-child(4n) {
-                margin-right: 0;
-            }
-
-            &:nth-last-child(-n + 4) {
-                margin-bottom: 0;
-            }
-        }
-
-        // width: calc(($adaptive-desktop - 3 * 30px - 30px) / 4);
-        // margin-right: 30px;
-        
-        &:nth-child(4n) {
-            margin-right: 0;
-        }
+      &:nth-last-child(-n + 4) {
+        margin-bottom: 0;
+      }
     }
 
+    // width: calc(($adaptive-desktop - 3 * 30px - 30px) / 4);
+    // margin-right: 30px;
 
-
-    &__photo {
-        display: block;
-        max-width: 100%;
+    &:nth-child(4n) {
+      margin-right: 0;
     }
+  }
 
-    &__info {
-        width: 100%;
-        padding: 30px 32px;
-    }
+  &__photo {
+    display: block;
+    width: 100%;
+  }
 
-    &__name,
-    &__spec {
-        margin-top: 0;
+  &__info {
+    width: 100%;
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-        font-size: 16px;
-        line-height: 1.18;
-    }
+  &__name,
+  &__spec {
+    margin-top: 0;
 
-    &__name {
-        margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.18;
+  }
 
-        font-weight: 500;
-        color: $secondary-text;
-    }
+  &__name {
+    margin-bottom: 10px;
 
-    &__spec {
-        margin-bottom: 16px;
-    }
+    font-weight: 500;
+    color: $secondary-text;
+  }
+
+  &__spec {
+    margin-bottom: 16px;
+  }
 }
-

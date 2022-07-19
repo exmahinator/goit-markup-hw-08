@@ -50,7 +50,53 @@
                         </svg>
                         +38 096 111 11 11</a></li>
             </ul>
-            <button type="button" class="header__button"></button>
+
+            <button type="button" class="button header__button" data-menu-button>
+                <svg class="header__icon-mobile" aria-label="Mobile menu switcher">
+                    <use class="header__icon-open" href="./images/icons.svg#menu-open"></use>
+                    <use class="header__icon-close" href="./images/icons.svg#menu-close"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" data-menu>
+                <ul class="list-reset mobile-menu__list">
+                    <li class="mobile-menu__item"><a href="./index.html"
+                            class="mobile-menu__link mobile-menu__active link-reset" aria-label="Our studio">
+                            Студія</a>
+                    </li>
+                    <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link-reset"
+                            aria-label="Our portfolio">
+                            Портфоліо</a>
+                    </li>
+                    <li class="mobile-menu__item"><a href="" class="mobile-menu__link link-reset"
+                            aria-label="Our contacts">
+                            Контакти</a>
+                    </li>
+                </ul>
+                <ul class="list-reset mobile-menu__contacts">
+                    <li class="mobile-menu__contacts-item"><a href="tel:+380961111111"
+                            class="mobile-menu__contacts-link mobile-menu__contacts-link--phone link-reset"
+                            aria-label="Call to us">
+                            +38 096 111 11 11</a></li>
+                    <li class="mobile-menu__contacts-item"><a href="mailto:info@devstudio.com"
+                            class="mobile-menu__contacts-link mobile-menu__contacts-link--email link-reset"
+                            aria-label="Email us">
+                            info@devstudio.com</a></li>
+                </ul>
+                <ul class="list-reset social-networks social-networks--mobile">
+                    <li class="social-networks__item--mobile"><a href=""
+                            class="social-networks__link--mobile link-reset" aria-label="Our Instagram">Instagram
+                        </a></li>
+                    <li class="social-networks__item--mobile"><a href=""
+                            class="social-networks__link--mobile link-reset" aria-label="Our Twitter">Twitter
+                        </a></li>
+                    <li class="social-networks__item--mobile"><a href=""
+                            class="social-networks__link--mobile link-reset" aria-label="Our Facebook">Facebook
+                        </a></li>
+                    <li class="social-networks__item--mobile"><a href=""
+                            class="social-networks__link--mobile link-reset" aria-label="Our LinkedIn">Linkedin
+                        </a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -386,7 +432,7 @@
         </div>
     </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__button" data-modal-close>
                 <svg class="modal__close">
@@ -441,9 +487,10 @@
                 <button class="button modal__submit" type="submit">Надіслати</button>
             </form>
         </div>
-    </div> -->
+    </div>
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/mobile.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
