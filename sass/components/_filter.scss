@@ -9,6 +9,13 @@
     max-width: 100%;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $adaptive-desktop) {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
     margin-bottom: 50px;
   }
 

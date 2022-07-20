@@ -95,14 +95,16 @@
       }
     }
 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @media screen and (min-width: $adaptive-desktop) {
       margin-right: 10px;
       width: 16px;
       height: 12px;
     }
 
-    .nav__contacts-link:hover &,
-    .nav__contacts-link:focus & {
+    .header__contacts-link:hover &,
+    .header__contacts-link:focus & {
       fill: $accent;
     }
   }

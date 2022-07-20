@@ -63,7 +63,7 @@
     padding-top: 118px;
     padding-bottom: 118px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $adaptive-desktop) {
       padding-top: 200px;
       padding-bottom: 200px;
     }
@@ -82,7 +82,7 @@
     text-align: center;
     color: $hero-text;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $adaptive-desktop) {
       font-size: 44px;
       line-height: 1.36;
       max-width: 607px;

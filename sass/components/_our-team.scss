@@ -4,13 +4,19 @@
   text-align: center;
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
     color: $secondary-text;
+
+    @media screen and (min-width: $adaptive-desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
   }
 
   &__list {
