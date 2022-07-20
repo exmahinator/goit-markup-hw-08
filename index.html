@@ -165,16 +165,31 @@
             <div class="container we-do__container">
                 <h2 class="we-do__title title-reset">Чим ми займаємося</h2>
                 <ul class="list-reset we-do__list">
-                    <li class="we-do__item"><img src="./images/box-1-squoosh.jpg" alt="computer on the table"
-                            width="370" class="we-do__image">
+                    <li class="we-do__item">
+                        <picture>
+                            <source srcset="./images/adaptive-compressed/desktop/we-do-01-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/we-do-01-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <img class="we-do__image" src="./images/adaptive-compressed/desktop/we-do-01-1x.jpg"
+                                alt="computer on the table" width="370" />
+                        </picture>
                         <p class="we-do__text">Десктопні застосунки</p>
                     </li>
-                    <li class="we-do__item"><img src="./images/box-2-squoosh.jpg" alt="phone in hand" width="370"
-                            class="we-do__image">
+                    <li class="we-do__item">
+                        <picture>
+                            <source srcset="./images/adaptive-compressed/desktop/we-do-02-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/we-do-02-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <img class="we-do__image" src="./images/adaptive-compressed/desktop/we-do-02-1x.jpg"
+                                alt="phone in hand" width="370" />
+                        </picture>
                         <p class="we-do__text">Мобільні застосунки</p>
                     </li>
-                    <li class="we-do__item"><img src="./images/box-3-squoosh.jpg" alt="tablet in hand" width="370"
-                            class="we-do__image">
+                    <li class="we-do__item">
+                        <picture>
+                            <source srcset="./images/adaptive-compressed/desktop/we-do-03-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/we-do-03-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <img class="we-do__image" src="./images/adaptive-compressed/desktop/we-do-02-1x.jpg"
+                                alt="tablet in hand" width="370" />
+                        </picture>
                         <p class="we-do__text">Дизайнерські рішення</p>
                     </li>
                 </ul>
@@ -187,9 +202,25 @@
                 <h2 class="team__title title-reset">Наша команда</h2>
                 <ul class="list-reset team__list">
                     <li class="team__item">
-                        <img src="./images/img-1-squoosh.jpg"
-                            alt="man in glasses, brown hair, with beard, wearing dark-brown shirt" width="270"
-                            class="team__photo">
+                        <picture>
+                            <source srcset="
+                                ./images/adaptive-compressed/desktop/team-01-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/team-01-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/tablet/team-01-1x.jpg 1x,
+                                ./images/adaptive-compressed/tablet/team-01-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/mobile/team-01-1x.jpg 1x,
+                                ./images/adaptive-compressed/mobile/team-01-2x.jpg 2x
+                                " media="(min-width: 480px)" />
+
+                            <img class="team__photo" src="./images/adaptive-compressed/mobile/team-01-1x.jpg"
+                                alt="man in glasses, brown hair, with beard, wearing dark-brown shirt" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Ігор Дем'яненко</h3>
                             <p class="team__spec">Product Designer</p>
@@ -218,9 +249,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-2-squoosh.jpg"
-                            alt="woman in glasses, blond, wearing black official jacket" width="270"
-                            class="team__photo">
+                        <picture>
+                            <source srcset="
+                                ./images/adaptive-compressed/desktop/team-02-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/team-02-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/tablet/team-02-1x.jpg 1x,
+                                ./images/adaptive-compressed/tablet/team-02-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/mobile/team-02-1x.jpg 1x,
+                                ./images/adaptive-compressed/mobile/team-02-2x.jpg 2x
+                                " media="(min-width: 480px)" />
+
+                            <img class="team__photo" src="./images/adaptive-compressed/mobile/team-02-1x.jpg"
+                                alt="woman in glasses, blond, wearing black official jacket" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Ольга Рєпіна</h3>
                             <p class="team__spec">Frontend Developer</p>
@@ -249,8 +296,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-3-squoosh.jpg" alt="man, brown hair, shaved, wearing light-blue shirt"
-                            width="270" class="team__photo">
+                        <picture>
+                            <source srcset="
+                                ./images/adaptive-compressed/desktop/team-03-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/team-03-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/tablet/team-03-1x.jpg 1x,
+                                ./images/adaptive-compressed/tablet/team-03-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/mobile/team-03-1x.jpg 1x,
+                                ./images/adaptive-compressed/mobile/team-03-2x.jpg 2x
+                                " media="(min-width: 480px)" />
+
+                            <img class="team__photo" src="./images/adaptive-compressed/mobile/team-03-1x.jpg"
+                                alt="man, brown hair, shaved, wearing light-blue shirt" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Микола Тарасов</h3>
                             <p class="team__spec">Marketing</p>
@@ -279,9 +343,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-4-squoosh.jpg"
-                            alt="man in glasses, brown hair, with beard, wearing black T-shirt" width="270"
-                            class="team__photo">
+                        <picture>
+                            <source srcset="
+                                ./images/adaptive-compressed/desktop/team-04-1x.jpg 1x,
+                                ./images/adaptive-compressed/desktop/team-04-2x.jpg 2x
+                                " media="(min-width: 1200px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/tablet/team-04-1x.jpg 1x,
+                                ./images/adaptive-compressed/tablet/team-04-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+
+                            <source srcset="
+                                ./images/adaptive-compressed/mobile/team-04-1x.jpg 1x,
+                                ./images/adaptive-compressed/mobile/team-04-2x.jpg 2x
+                                " media="(min-width: 480px)" />
+
+                            <img class="team__photo" src="./images/adaptive-compressed/mobile/team-04-1x.jpg"
+                                alt="man in glasses, brown hair, with beard, wearing black T-shirt" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Михайло Єрмаков</h3>
                             <p class="team__spec">UI Designer</p>
